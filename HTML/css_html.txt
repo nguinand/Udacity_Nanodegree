@@ -1,0 +1,106 @@
+HTML formatting
+
+position: static --> 
+The element is positioned according to the normal flow of the document. 
+The top, right, bottom, left, and z-index properties have no effect. This is the default value.
+
+position: absolute --> 
+The element is removed from the normal document flow; no space is created for the element in the page layout. 
+Instead, it is positioned relative to its closest positioned ancestor if any; otherwise, 
+it is placed relative to the initial containing block. Its final position is determined by the values of top, 
+right, bottom, and left. This value creates a new stacking context when the value of z-index is not auto. 
+Absolutely positioned boxes can have margins, and they do not collapse with any other margins.
+
+position: relative -->
+The element is positioned according to the normal flow of the document, 
+and then offset relative to itself based on the values of top, right, bottom, 
+and left. The offset does not affect the position of any other elements; 
+thus, the space given for the element in the page layout is the same as if position were static. 
+This value creates a new stacking context when the value of z-index is not auto. 
+The effect of relative on table-*-group, table-row, table-column, table-cell, and 
+table-caption elements is undefined.
+
+position: fixed -->
+The element is removed from the normal document flow; no space is created for the element in the page layout. 
+Instead, it is positioned relative to the screen's viewport and doesn't move when scrolled. 
+Its final position is determined by the values of top, right, bottom, and left. 
+This value always creates a new stacking context. When an ancestor has the transform, perspective, 
+or filter property set to something other than none, that ancestor is used as the container instead of the 
+viewport (see CSS Transforms Spec). In printed documents, the element is placed in the same position on
+every page.
+
+
+				Relative			Absolute		Fixed
+When				After normal flow		Before normal flow	Before normal flow
+Positioned relative to...	position in normal flow		parent			viewport
+
+
+text-align -->
+CSS property describes how inline content like text is aligned in its parent block element. 
+text-align does not control the alignment of block elements, only their inline content.
+
+vertical-align -->
+CSS property specifies the vertical alignment of an inline or table-cell box.
+
+float : right -->
+The float CSS property specifies that an element should be placed along the 
+left or right side of its container, allowing text and inline elements to wrap 
+around it. The element is removed from the normal flow of the web page, 
+though still remaining a part of the flow 
+
+overflow--> 
+CSS property specifies what to do when an element's content is too large to 
+fit in its block formatting context. It is a shorthand for the overflow-x and 
+overflow-y properties.
+
+clear -->
+ CSS property specifies whether an element can be next to floating elements 
+that precede it or must be moved down (cleared) below them.
+The clear property applies to both floating and non-floating elements.
+
+*responsive design
+--<meta name="viewport" content="width=device-width, initial-scale=1">
+
+--Page will adapt: <link rel="stylesheet" media="screen and (min-width:500px)" href="over500.css">
+
+--You may also use -> @media screen and (min-width:500px){ body{background-color:green;}}
+
+--With a conditional ->
+ @media screen and (max-width: 500px){
+.yes{ opacity: 1; }
+
+.no{ opacity:0;}
+}
+
+*Flexbox -The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. Usually goes inside a containter that holds other divs.
+--display: flex;
+--flex-wrap: wrap; -->wraps the boxes around
+--order: (#); --> declares the order in which boxes are displayed. 
+--example: .container { display: flex; flex-wrap: wrap;}
+
+*layout shifter --> uses more order commands. All elements start with an order of 0. anything below 0 will appepar first. Higher than 0 prints last. As an order.
+--order: 1;
+
+*Off Canvas
+-------
+nav{
+	width:300px;
+	height: 100%;
+	position: absolute;
+	transform: translate(-300px,0);
+	traansition: transform 0.3s ease;
+}
+
+nav.open{
+	transform: translate(0,0);
+}
+
+
+--------
+
+*Colums and tables
+--You can use media queries and display: none; to hide unwanted information. Because columns can overflow.
+--If you want to contain a table and have a scroll bar, put it in a div container.
+	div.container_table{
+		width: 100%;  overflow-x: auto;
+		}
