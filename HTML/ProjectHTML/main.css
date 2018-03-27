@@ -1,0 +1,49 @@
+main{width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+
+
+img{
+    width: 100%;
+    object-fit: contain;
+    background-size: contain;
+}
+.container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+    .info{
+        float: right;
+        position: relative;
+        width: 50%;
+        height: 100%;
+        font-size: xx-large;
+        text-align: center;
+    }
+
+    .pro_pic{
+        float: left;
+        width: 15%;
+    }
+
+    .line{
+        width: 100%;
+        border-bottom: 5px solid black;
+        margin-bottom: 5px;
+    }
+
+      .row{width: 100%;}
+
+      .flexAdd{display: flex;}
+
+      .thumbnail{width: 33.33%;}
+
+      .tool{width: 25%;}
+
+      .workBan
+      {
+          text-align: center;
+          font-size: -webkit-xxx-large;
+      }

@@ -1,0 +1,71 @@
+@media screen and (min-width: 451px) {
+    main{width: 100%;}
+    .profile-job{ display: none;}
+    .pro_pic{width: 50%;}
+    .thumbnail{width: 30.33%;}
+    .flexAdd{flex-wrap: wrap;}
+}
+
+@media screen and (min-width: 550px){
+    .profile-job {display: contents;}
+}
+
+
+@media screen and (max-width: 450px) {
+
+main{width: 100%;}
+
+    .info{
+        width:100%;
+        float: none;
+    }
+    .pro_pic{display: none;}
+
+    .workBan{
+        font-size: large;
+    }
+
+    .thumbnail{
+        width: 50.33%;
+        margin: auto;
+     }
+
+    .flexAdd{display: block;}
+
+    h3{font-size: 21px;}
+    p{font-size: 18px;}
+}
+
+@media screen and (min-width: 1500px) {
+    main{
+        width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .flexAdd{flex-wrap: unset;}
+
+    .pro_pic{
+        float: left;
+        width: 15%;
+    }
+}
+
+@media screen and (min-width: 914px){
+    .pro_pic{width: 20%;}
+}
+
+@media screen and (min-width: 650px){
+    .text-uppercase{font-size: 1.7em;}
+    p{font-size: 1.4em;}
+}
+
+@media screen and (min-width: 725px){
+    .pro_pic{width: 30%;}
+}
+
+@media screen and (min-width: 870px){
+    .flexAdd{flex-wrap: unset;}
+}
+@media screen and (min-width: 912px){
+    .pro_pic {width: 15%;}
+}
